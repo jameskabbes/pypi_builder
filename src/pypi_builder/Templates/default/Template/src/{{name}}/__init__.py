@@ -5,6 +5,3 @@ Dir = do.Dir( os.path.abspath( __file__ ) ).ascend()   #Dir that contains the pa
 src_Dir = Dir.ascend()                                  #src Dir that is one above
 repo_Dir = src_Dir.ascend()                    
 cwd_Dir = do.Dir( do.get_cwd() )
-
-templates_Dir = do.Dir( Dir.join( 'Templates' ) )
-
