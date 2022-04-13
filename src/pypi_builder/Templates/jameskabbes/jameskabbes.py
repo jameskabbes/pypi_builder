@@ -1,7 +1,7 @@
-from pypi_builder.BasePackage import BasePackage
+from pypi_builder import BasePackage
 from repository_generator.Templates.jameskabbes.jameskabbes import Repository 
-import dir_ops.dir_ops as do
-import py_starter.py_starter as ps
+import dir_ops as do
+import py_starter as ps
 
 from pypi_builder.Templates.default.default import Package as default_Package
 

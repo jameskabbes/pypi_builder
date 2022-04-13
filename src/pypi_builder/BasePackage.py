@@ -1,5 +1,5 @@
-from repository_generator.BaseRepository import BaseRepository
-import py_starter.py_starter as ps
+from repository_generator import BaseRepository
+import py_starter as ps
 import user_profile
 import datetime
 
