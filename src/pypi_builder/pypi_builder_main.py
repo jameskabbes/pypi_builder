@@ -1,5 +1,5 @@
-import dir_ops.dir_ops as do
-import py_starter.py_starter as ps
+import dir_ops as do
+import py_starter as ps
 import pypi_builder
 
 def get_template():
@@ -13,12 +13,10 @@ def get_template():
     return module.Package
 
 
-def run( *args ):
+def generate():
 
     Package_template = get_template()
-    R = Package_template( pypi_builder.cwd_Dir )
-    R.generate( overwrite = "overwrite" in args )
+    R = Package_template( pypi_builder._cwd_Dir )
+    R.generate()
 
-if __name__ == '__main__':
-    run()
 

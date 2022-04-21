@@ -1,7 +1,7 @@
-from pypi_builder.BasePackage import BasePackage
+from pypi_builder import BasePackage
 from repository_generator.Templates.default.default import Repository 
-import dir_ops.dir_ops as do
-import py_starter.py_starter as ps
+import dir_ops as do
+import py_starter as ps
 import os
 
 class Package( BasePackage, Repository ):
