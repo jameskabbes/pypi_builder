@@ -24,12 +24,12 @@ class Package( BasePackage, Repository ):
 
     def gen_atts( self, joined_kwargs ):
 
-        keys = ['pypi_name','url_documentation']
+        keys = ['name','url_documentation']
 
         for key in keys:
             if key not in joined_kwargs:
                 
-                if key == 'pypi_name':
+                if key == 'name':
                     value = 'kabbes_' + self.name
                 elif key == 'url_documentation':
                     value = self.url_pages
