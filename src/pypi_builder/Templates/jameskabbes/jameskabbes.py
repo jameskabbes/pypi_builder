@@ -2,6 +2,7 @@ from pypi_builder import BasePackage
 from repository_generator.Templates.jameskabbes.jameskabbes import Repository 
 import dir_ops as do
 import py_starter as ps
+import user_profile
 
 from pypi_builder.Templates.default.default import Package as default_Package
 
@@ -11,6 +12,8 @@ class Package( BasePackage, Repository ):
     template_Dir = default_Package.template_Dir
 
     DEFAULT_KWARGS = {
+        'author': user_profile.profile.name,
+        'author_email': user_profile.profile.email
     }
 
     def __init__( self, *args, **kwargs ):

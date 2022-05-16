@@ -1,6 +1,5 @@
 from repository_generator import BaseRepository
 import py_starter as ps
-import user_profile
 import datetime
 import configparser
 
@@ -10,8 +9,6 @@ class BasePackage( BaseRepository ):
     CONFIG_ATTS_NEEDED = ['author','version','name']
 
     DEFAULT_KWARGS = {
-        'author': user_profile.profile.name,
-        'author_email': user_profile.profile.email,
         'version': '0.1.0',
         'year': str(datetime.datetime.now().year)
     }
