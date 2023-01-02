@@ -9,7 +9,7 @@ class BasePackage( BaseRepository ):
     CONFIG_ATTS_NEEDED = ['author','version','name']
 
     DEFAULT_KWARGS = {
-        'version': '0.1.0',
+        'version': '0.0.0',
         'year': str(datetime.datetime.now().year)
     }
     def __init__( self, *args, **kwargs ):
