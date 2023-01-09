@@ -1,0 +1,9 @@
+{
+    "src_name": "src",
+    "package_version":"0.0.0",
+    "package_name": "{{user_profile.pypi.username}}_{{repo.name}}",
+    "author_email":"{{user_profile.email}}",
+    "pypi_url":"https://pypi.org/project/{{package_name}}",
+    "github_url":"https://github.com/{{user_profile.github.username}}/{{repo.name}}",
+    "documentation_url":"https://{{user_profile.github.username}}.github.io/{{repo.name}}"
+}
