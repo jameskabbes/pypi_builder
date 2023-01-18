@@ -1,22 +1,26 @@
 import pypi_builder
-import repository_generator
-import kabbes_user_client
-import py_starter as ps
+import kabbes_client
 import datetime
+import repository_generator
 
-class Client( pypi_builder.PackageGenerator, repository_generator.Client ):
+class Client( pypi_builder.PackageGenerator ):
 
-    BASE_CONFIG_DICT = {
-        "_Dir": pypi_builder._Dir,
-        "year_str": str(datetime.datetime.now().year)
-    }
+    _BASE_DICT = { "year_str": str(datetime.datetime.now().year) }
 
-    def __init__( self, dict={}, **kwargs ):
+    def __init__( self, dict={} ):
 
-        repository_generator.Client.__init__( self )
-        dict = ps.merge_dicts( Client.BASE_CONFIG_DICT, dict )
-        overwrite_cfg = kabbes_user_client.Client( dict=dict, **kwargs ).cfg
-        self.cfg.merge(overwrite_cfg)
+        d = {}
+        d.update( Client._BASE_DICT )
+        d.update( dict )
+
+        self.Package = kabbes_client.Package( pypi_builder._Dir, dict=d )
+        cfg_pypi = self.Package.cfg
+        cfg_repo_gen = repository_generator.Client().cfg
+
+        cfg_repo_gen.merge( cfg_pypi )
+        self.cfg = cfg_repo_gen
+
+        self.cfg.print_atts()
 
         pypi_builder.PackageGenerator.__init__( self )
 
