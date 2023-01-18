@@ -1,7 +1,7 @@
 import pypi_builder
 import kabbes_client
-import datetime
 import repository_generator
+import datetime
 
 class Client( pypi_builder.PackageGenerator ):
 
@@ -20,7 +20,6 @@ class Client( pypi_builder.PackageGenerator ):
         cfg_repo_gen.merge( cfg_pypi )
         self.cfg = cfg_repo_gen
 
-        self.cfg.print_atts()
 
         pypi_builder.PackageGenerator.__init__( self )
 
