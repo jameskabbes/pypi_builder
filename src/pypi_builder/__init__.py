@@ -7,3 +7,5 @@ _repo_Dir = _src_Dir.ascend()
 
 from .PackageGenerator import PackageGenerator
 from .Client import Client
+
+client = Client()
