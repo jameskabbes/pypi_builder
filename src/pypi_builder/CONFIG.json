@@ -1,6 +1,5 @@
 {
     "src_name": "src",
-    "package_version":"0.0.0",
     "package_name": "{{user_profile.profile.pypi.username}}_{R{repo.name}R}",
     "author_email":"{{user_profile.profile.email}}",
     "pypi_url":"https://pypi.org/project/{R{package_name}R}",
