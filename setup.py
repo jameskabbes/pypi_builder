@@ -6,6 +6,7 @@ if __name__ == '__main__':
         [ 
             'Templates/default/{-{src_name}-}/{-{package_name}-}/__init__.py',
             'Templates/default/{-{src_name}-}/{-{package_name}-}/__main__.py',
+            'Templates/default/{-{src_name}-}/{-{package_name}-}/CONFIG.json',
             'Templates/default/LICENSE', 
             'Templates/default/MANIFEST.in',
             'Templates/default/pyproject.toml', 
