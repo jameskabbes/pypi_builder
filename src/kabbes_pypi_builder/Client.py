@@ -1,9 +1,9 @@
-import pypi_builder
+import kabbes_pypi_builder
 import kabbes_client
-import repository_generator
+import kabbes_repository_generator
 import datetime
 
-class Client( pypi_builder.PackageGenerator ):
+class Client( kabbes_pypi_builder.PackageGenerator ):
 
     _BASE_DICT = { "year_str": str(datetime.datetime.now().year) }
 
@@ -13,13 +13,13 @@ class Client( pypi_builder.PackageGenerator ):
         d.update( Client._BASE_DICT )
         d.update( dict )
 
-        self.Package = kabbes_client.Package( pypi_builder._Dir, dict=d )
+        self.Package = kabbes_client.Package( kabbes_pypi_builder._Dir, dict=d )
         cfg_pypi = self.Package.cfg
-        cfg_repo_gen = repository_generator.Client().cfg
+        cfg_repo_gen = kabbes_repository_generator.Client().cfg
 
         cfg_repo_gen.merge( cfg_pypi )
         self.cfg = cfg_repo_gen
 
 
-        pypi_builder.PackageGenerator.__init__( self )
+        kabbes_pypi_builder.PackageGenerator.__init__( self )
 
