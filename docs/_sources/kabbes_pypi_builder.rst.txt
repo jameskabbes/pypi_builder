@@ -1,0 +1,29 @@
+kabbes\_pypi\_builder package
+=============================
+
+Submodules
+----------
+
+kabbes\_pypi\_builder.Client module
+-----------------------------------
+
+.. automodule:: kabbes_pypi_builder.Client
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+kabbes\_pypi\_builder.PackageGenerator module
+---------------------------------------------
+
+.. automodule:: kabbes_pypi_builder.PackageGenerator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: kabbes_pypi_builder
+   :members:
+   :undoc-members:
+   :show-inheritance:
