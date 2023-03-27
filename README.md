@@ -1,8 +1,8 @@
-[GitHub Pages](https://jameskabbes.github.io/pypi_builder)<br>
-[PyPI](https://pypi.org/project/kabbes-pypi-builder)
-
 # pypi_builder
 project for easily deploying code to Python Package Index
+
+[Documentation](https://jameskabbes.github.io/pypi_builder)<br>
+[PyPI](https://pypi.org/project/kabbes-pypi-builder)
 
 <br> 
 
